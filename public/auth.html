@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication UI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Authentication</h1>
+        <div class="auth-forms">
+            <div class="signup-form">
+                <h2>Sign Up</h2>
+                <form action="/signup" method="POST">
+                    <label for="signup-username">Username:</label>
+                    <input type="text" id="signup-username" name="username" required>
+                    <label for="signup-password">Password:</label>
+                    <input type="password" id="signup-password" name="password" required>
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+            <div class="signin-form">
+                <h2>Sign In</h2>
+                <form action="/signin" method="POST">
+                    <label for="signin-username">Username:</label>
+                    <input type="text" id="signin-username" name="username" required>
+                    <label for="signin-password">Password:</label>
+                    <input type="password" id="signin-password" name="password" required>
+                    <button type="submit">Sign In</button>
+                </form>
+            </div>
+            <div class="oauth">
+                <h2>Or Sign In With</h2>
+                <a href="/auth/google" class="oauth-button">Google</a>
+                <a href="/auth/facebook" class="oauth-button">Facebook</a>
+                <a href="/auth/twitter" class="oauth-button">Twitter</a>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
